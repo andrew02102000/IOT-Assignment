@@ -1,0 +1,17 @@
+#include <dht.h>
+
+dht iot;
+void setup() {
+  Serial.begin(9600);
+}
+
+void loop() {
+  int val = iot.read11(7);
+  Serial.print("Temperature = ");
+  Serial.print(iot.temperature);
+  Serial.print("\t Humidity = ");
+  Serial.println(iot.humidity);
+  delay(1000);
+
+}
+  
